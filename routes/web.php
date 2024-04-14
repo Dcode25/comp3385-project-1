@@ -22,3 +22,9 @@ Route::get('/about', function () {
 });
 
 // Create additional Routes below
+
+Route::get('/properties/create', [PropertyController::class, 'create']);
+Route::post('/properties/create', [PropertyController::class, 'add']);
+
+Route::get('/properties', [PropertyController::class, 'index']);
+Route::get('/properties/{property_id}', [PropertyController::class, 'property']);
